@@ -1,0 +1,32 @@
+{
+  "name": "@tacc/core-cms-custom.cfde-wheel",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "TACC ACI WMA <wma-portals@tacc.utexas.edu>",
+  "description": "CFDE Navigation Wheel bundle for browser embedding",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "cfde-wheel": "git+ssh://git@github.com/MaayanLab/cfde-wheel.git",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "shx": "latest",
+    "vite": "^5.4.0"
+  },
+  "scripts": {
+    "start": "npm run build && npm run preview",
+    "build": "vite build",
+    "prepreview": "shx sed -i 's/__DIST__/./g' index.html && shx cp index.html dist/",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TACC/Core-CMS-Custom.git",
+    "directory": "cfde-wheel"
+  }
+}
