@@ -13,6 +13,9 @@ Add this to your HTML page:
 ```html
 <nav id="cfde-wheel"></nav>
 <script src="path/to/cfde-wheel.iife.js"></script>
+<!-- E.g. --><!--
+<script>https://cdn.jsdelivr.net/gh/TACC/cfde-wheel-embed@v0.1.1/dist/cfde-wheel.iife.js"></script>
+-->
 ```
 
 The script will auto-initialize the wheel into the element with ID `cfde-wheel`.
