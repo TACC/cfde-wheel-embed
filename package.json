@@ -18,6 +18,7 @@
     "shx": "latest",
     "vite": "^5.4.0"
   },
+  "type": "module",
   "scripts": {
     "start": "npm run build && npm run preview",
     "build": "vite build",
