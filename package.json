@@ -1,5 +1,5 @@
 {
-  "name": "@tacc/core-cms-custom.cfde-wheel",
+  "name": "@tacc/cfde-wheel-embed",
   "version": "1.0.0",
   "license": "MIT",
   "author": "TACC ACI WMA <wma-portals@tacc.utexas.edu>",
