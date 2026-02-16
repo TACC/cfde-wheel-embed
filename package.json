@@ -27,7 +27,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TACC/Core-CMS-Custom.git",
-    "directory": "cfde-wheel"
+    "url": "https://github.com/TACC/cfde-wheel-embed.git"
   }
 }
