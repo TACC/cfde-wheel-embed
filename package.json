@@ -1,6 +1,6 @@
 {
   "name": "@tacc/cfde-wheel-embed",
-  "version": "1.0.0",
+  "version": "0.1.3",
   "license": "MIT",
   "author": "TACC ACI WMA <wma-portals@tacc.utexas.edu>",
   "description": "CFDE Navigation Wheel bundle for browser embedding",
