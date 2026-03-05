@@ -17,7 +17,7 @@ function initCFDEWheel(containerIdOrElement) {
   }
 
   const root = createRoot(container);
-  root.render(React.createElement(CFDEWheel));
+  root.render(React.createElement(CFDEWheel, { new_window: true }));
 }
 
 // Auto-initialize if container with default ID exists
