@@ -9,7 +9,7 @@
     "npm": ">=8"
   },
   "dependencies": {
-    "cfde-wheel": "github:MaayanLab/cfde-wheel",
+    "cfde-wheel": "github:MaayanLab/cfde-wheel#v1.0.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
