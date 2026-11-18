@@ -9,7 +9,7 @@
     "npm": ">=8"
   },
   "dependencies": {
-    "cfde-wheel": "github:MaayanLab/cfde-wheel#v1.0.6",
+    "cfde-wheel": "github:MaayanLab/cfde-wheel#231f51f24ce6552a73e81c158287d57f68dc7c09",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -22,7 +22,7 @@
   "scripts": {
     "start": "npm run build && npm run preview",
     "build": "vite build",
-    "prepreview": "shx sed -i 's/__DIST__/./g' index.html && shx cp index.html dist/",
+    "prepreview": "shx sed -i 's/__DIST__/./g' index.html && shx cp index.html dist/ && shx cp examples/button.html dist/button.html",
     "preview": "vite preview"
   },
   "repository": {

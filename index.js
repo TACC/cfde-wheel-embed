@@ -5,8 +5,9 @@ import CFDEWheel from 'cfde-wheel';
 /**
  * Initialize the CFDE Navigation Wheel
  * @param {string|HTMLElement} containerIdOrElement - ID of the container element or the element itself
+ * @param {{button?: boolean}} [options] - Set button to true for an inline trigger
  */
-function initCFDEWheel(containerIdOrElement) {
+function initCFDEWheel(containerIdOrElement, { button = false } = {}) {
   const container = typeof containerIdOrElement === 'string'
     ? document.getElementById(containerIdOrElement)
     : containerIdOrElement;
@@ -17,14 +18,14 @@ function initCFDEWheel(containerIdOrElement) {
   }
 
   const root = createRoot(container);
-  root.render(React.createElement(CFDEWheel, { new_window: true }));
+  root.render(React.createElement(CFDEWheel, { button, new_window: true }));
 }
 
 // Auto-initialize if container with default ID exists
 function autoInit() {
   const defaultContainer = document.getElementById('cfde-wheel');
   if (defaultContainer) {
-    initCFDEWheel(defaultContainer);
+    initCFDEWheel(defaultContainer, { button: defaultContainer.hasAttribute('data-button') });
   }
 }
 

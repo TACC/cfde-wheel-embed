@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFDE Wheel Button Demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    .slot { border: 1px dashed #777; margin-block: 1rem; padding: 0.75rem; }
+    footer { display: flex; justify-content: flex-end; }
+  </style>
+</head>
+<body>
+  <h1>CFDE Wheel Button</h1>
+  <p>Click the CFDE logo to open the wheel. Move it to see how it follows the page layout.</p>
+  <button id="move" type="button">Move wheel to footer</button>
+
+  <header class="slot" id="header-slot">
+    <nav id="wheel-button" aria-label="CFDE navigation"></nav>
+  </header>
+  <footer class="slot" id="footer-slot"></footer>
+
+  <script src="./cfde-wheel.iife.js"></script>
+  <script>
+    const wheel = document.getElementById('wheel-button');
+    const header = document.getElementById('header-slot');
+    const footer = document.getElementById('footer-slot');
+
+    window.CFDEWheel.init(wheel, { button: true });
+
+    document.getElementById('move').addEventListener('click', (event) => {
+      const destination = wheel.parentElement === header ? footer : header;
+      destination.append(wheel);
+      event.currentTarget.textContent = destination === footer
+        ? 'Move wheel to header'
+        : 'Move wheel to footer';
+    });
+  </script>
+</body>
+</html>
